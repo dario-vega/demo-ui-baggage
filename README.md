@@ -2,7 +2,7 @@
 
 ## Running the project in Visual Builder Managed Service
 
-<contact me>
+Please contact me
 
 ## Running the project in IaaS or on-premise installation
 
