@@ -1,0 +1,55 @@
+Grunt is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, and linting. 
+It uses a command-line interface to run custom tasks defined in a file. 
+It is distributed via npm. 
+view-source:https://www.oracle.com/index.html
+
+
+npm (originally short for Node Package Manager)[ is a package manager for the JavaScript programming language. 
+It is the default package manager for the JavaScript runtime environment Node.js. 
+It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry. 
+The registry is accessed via the client, and the available packages can be browsed and searched via the npm website. 
+
+https://www.npmjs.com/
+https://www.npmjs.com/package/oracle-nosqldb
+https://www.npmjs.com/package/oracledb
+https://www.npmjs.com/package/@oracle/bots-node-sdk
+
+
+cd gruntexample
+
+npm install grunt
+npm install grunt-cli
+npm install load-grunt-tasks
+
+
+restore Grunfile.js and package.json
+npm install
+
+
+./node_modules/.bin/grunt vb-export   \
+--url=https://oic-oraseemeafrtech1.integration.ocp.oraclecloud.com/ic/builder     --username=dario.vega@oracle.com     --password=$ppd  --id=Baggage_Demo    --ver=2.0.1 --force
+
+./node_modules/.bin/grunt vb-prepare   \
+--url=https://oic-oraseemeafrtech1.integration.ocp.oraclecloud.com/ic/builder     --username=dario.vega@oracle.com     --password=$ppd     --id=Baggage_Demo    --ver=2.0.1 --force
+
+./node_modules/.bin/grunt vb-optimize   \
+--url=https://oic-oraseemeafrtech1.integration.ocp.oraclecloud.com/ic/builder     --username=dario.vega@oracle.com     --password=$ppd     --id=Baggage_Demo    --ver=2.0.1 --force
+
+
+
+./node_modules/.bin/grunt vb-build   \
+--url=https://oic-oraseemeafrtech1.integration.ocp.oraclecloud.com/ic/builder     --username=dario.vega@oracle.com     --password=$ppd     --id=Baggage_Demo    --ver=2.0.1 --force
+
+./node_modules/.bin/grunt vb-publish   \
+--url=https://oic-oraseemeafrtech1.integration.ocp.oraclecloud.com/ic/builder     --username=dario.vega@oracle.com     --password=$ppd     --id=Baggage_Demo    --ver=2.0.1 --schema=live
+	
+https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients/1.0.2
+	
+cd /var/www/html/
+cp /home/opc/gruntexample/build/optimized.zip .
+unzip optimized.zip -d demo	
+
+jq ".servers[].url" /var/www/html/demo/services/apiBagaggeDemo/openapi3.json
+jq '.servers[].url="<your value>"' /var/www/html/demo/services/apiBagaggeDemo/openapi3.json
+	
+jq '.servers[].url="<your value>"' /var/www/html/demo/services/apiBagaggeDemo/openapi3.json | jq ".servers[].url"
