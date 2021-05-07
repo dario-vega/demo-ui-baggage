@@ -26,3 +26,18 @@ jq '.servers[].url="<your value>"' /var/www/html/demo/services/apiBagaggeDemo/op
 #modify the url in the json file and show the all json document including the modification, the modification is not applied directly to the file, we need a redirection.
 jq '.servers[].url="<your value>"' /var/www/html/demo/services/apiBagaggeDemo/openapi3.json 
 ````
+
+```
+ls -lrt mobileApps/baggagedemo*/index.html
+ls -lrt webApps/webbaggage*/index.html
+```
+NB If you've created your own version of Digital Assistant, Please modify webApps/webbaggagecustomer/index.html
+
+## Use the following URL in order to test
+- PWA from your mobile : https://<yourwebserver>/demo/mobileApps/baggagedemocustomer/index.html
+- webApp from your browser : https://<yourwebserver>/demo/webApps/webbaggageairline/index.html
+  
+## Do not forget, the application is accessible also using our geo-distributed configuration
+
+- http://ndcsdemo.com/ 
+
