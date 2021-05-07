@@ -4,7 +4,7 @@
 
 Please contact me
 
-## Running the project in IaaS or on-premise installation
+## Running the project in IaaS or On-Premise
 
 ````
 sudo su -
