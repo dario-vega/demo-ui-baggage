@@ -23,7 +23,7 @@ Some jq commands that can help you to change the API Gateway to use
 OLDGW=`jq -r ".servers[].url[8:-12]" /var/www/html/demo/services/apiBagaggeDemo/openapi3.json`
 echo $OLDGW
 #modify the url in the json file - provide your new APIGW url
-find demo -type f -exec sed -i "s/$OLDGW/dqoqyovkqdd6tl6dxrgbamt6xu.apigateway.eu-paris-1.oci.customer-oci.com/g"   {} \;
+find demo -type f -exec sed -i "s/$OLDGW/$NEWGW/g"   {} \;
 #customize the links sections if desired
 find . -type f -exec sed -i "s/Useful Links/You are at Paris Region/g"   {} \;
 ````
